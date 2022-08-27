@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\HAL;.\MCAL;.\SERVICE;.\LIBRARIES;.\APP;..\CTOS_proj</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -385,7 +385,7 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>.\APP\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -396,24 +396,29 @@
           <GroupName>MCAL</GroupName>
           <Files>
             <File>
-              <FileName>GPIO.c</FileName>
+              <FileName>port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\GPIO.c</FilePath>
+              <FilePath>.\MCAL\port.c</FilePath>
             </File>
             <File>
-              <FileName>GPIO.h</FileName>
+              <FileName>port.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\GPIO.h</FilePath>
+              <FilePath>.\MCAL\port.h</FilePath>
             </File>
             <File>
-              <FileName>timer.c</FileName>
+              <FileName>Dio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\Dio.h</FilePath>
+            </File>
+            <File>
+              <FileName>Dio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\timer.c</FilePath>
+              <FilePath>.\MCAL\Dio.c</FilePath>
             </File>
             <File>
-              <FileName>timer.h</FileName>
+              <FileName>Dio_types.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\timer.h</FilePath>
+              <FilePath>.\MCAL\Dio_types.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -421,24 +426,24 @@
           <GroupName>HAL</GroupName>
           <Files>
             <File>
-              <FileName>led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\led.h</FilePath>
-            </File>
-            <File>
               <FileName>led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\led.c</FilePath>
+              <FilePath>.\HAL\led.c</FilePath>
             </File>
             <File>
-              <FileName>PB.h</FileName>
+              <FileName>led.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\PB.h</FilePath>
+              <FilePath>.\HAL\led.h</FilePath>
             </File>
             <File>
               <FileName>PB.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\PB.c</FilePath>
+              <FilePath>.\HAL\PB.c</FilePath>
+            </File>
+            <File>
+              <FileName>PB.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\PB.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -449,14 +454,14 @@
           <GroupName>COMMON</GroupName>
           <Files>
             <File>
+              <FileName>STD_types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SERVICE\STD_types.h</FilePath>
+            </File>
+            <File>
               <FileName>tm4c123gh6pm.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\tm4c123gh6pm.h</FilePath>
-            </File>
-            <File>
-              <FileName>types.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\types.h</FilePath>
             </File>
           </Files>
         </Group>

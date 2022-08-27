@@ -1,6 +1,7 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
-".\objects\gpio.o"
+".\objects\port.o"
+".\objects\dio.o"
 ".\objects\led.o"
 ".\objects\pb.o"
 ".\objects\lcfg.o"
