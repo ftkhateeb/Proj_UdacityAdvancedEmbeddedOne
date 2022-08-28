@@ -1,0 +1,7 @@
+#ifndef LEDPORJ_CONFIG_PORT_CFG_H
+#define LEDPORJ_CONFIG_PORT_CFG_H
+
+#define PORT_NUM_OF_ACTIVATED_PINS 3
+
+
+#endif
