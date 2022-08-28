@@ -2,6 +2,7 @@
 ".\objects\main.o"
 ".\objects\port.o"
 ".\objects\dio.o"
+".\objects\timer.o"
 ".\objects\led.o"
 ".\objects\pb.o"
 ".\objects\lcfg.o"

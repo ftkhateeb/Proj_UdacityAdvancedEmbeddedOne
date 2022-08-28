@@ -420,6 +420,21 @@
               <FileType>5</FileType>
               <FilePath>.\MCAL\Dio_types.h</FilePath>
             </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>port_types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\port_types.h</FilePath>
+            </File>
+            <File>
+              <FileName>timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\timer.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

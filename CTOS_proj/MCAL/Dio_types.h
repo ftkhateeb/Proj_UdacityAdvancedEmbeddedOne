@@ -78,7 +78,20 @@ typedef enum
 
 }Dio_LevelType_e;
 
-typedef uint32 DIO_PortLevelType;
+typedef enum
+{
+    PIN0,
+    PIN1,
+    PIN2,
+    PIN3,
+    PIN4,
+    PIN5,
+    PIN6,
+    PIN7,
+    
+
+}Dio_PinPositionType_e;
+typedef uint8 DIO_PortLevelType;
 
 #endif
 

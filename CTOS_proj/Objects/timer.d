@@ -1,1 +1,1 @@
-.\objects\timer.o: timer.c
+.\objects\timer.o: MCAL\timer.c
