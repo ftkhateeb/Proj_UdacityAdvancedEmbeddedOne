@@ -125,6 +125,14 @@ typedef enum
     PORT_IntBothEdges
 }PORT_IntCtrType_e;
 
+typedef enum
+{   
+    PORT_PIN_UNLOCK,
+    PORT_PIN_LOCK
+
+
+}PORT_PinLockType_e;
+
 typedef struct
 {
     PORT_PinType_e PinId;
@@ -133,7 +141,7 @@ typedef struct
     PORT_InternalAttachType_e InternalAttach;
     PORT_IntCtrType_e Interrupt;
     PORT_PinOutputCurrentType_e CurrentDrive;
-
+    PORT_PinLockType_e LockStatus;
 } PORT_ConfigType_S;
 
 #endif
