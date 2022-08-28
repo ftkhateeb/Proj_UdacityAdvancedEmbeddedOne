@@ -24,9 +24,9 @@ int main(void){
   while(1){
 		In = GPIO_PORTF_DATA_R&0x10; // read PF4 into In
     if(In == 0x00){              // zero means SW1 is pressed
-      GPIO_PORTF_DATA_R = 0x08;  // LED is green
+      GPIO_PORTF_DATA_R =0x02 ;  // LED is green
 		} else{                      // 0x10 means SW1 is not pressed
-      GPIO_PORTF_DATA_R = 0x02;  // LED is red
+      GPIO_PORTF_DATA_R =0x08;  // LED is red
     }
 		
     Delay();                     // wait 0.1 sec
@@ -48,3 +48,4 @@ void Delay(void){unsigned long volatile time;
 		time--;
   }
 }
+
