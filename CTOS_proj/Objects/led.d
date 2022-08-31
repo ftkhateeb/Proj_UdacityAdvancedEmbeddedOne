@@ -6,3 +6,6 @@
 .\objects\led.o: ..\CTOS_proj\tm4c123gh6pm.h
 .\objects\led.o: .\MCAL\port_types.h
 .\objects\led.o: .\SERVICE\STD_types.h
+.\objects\led.o: .\SERVICE\RAL.h
+.\objects\led.o: .\Config\port_cfg.h
+.\objects\led.o: .\SERVICE\Bit_manipulation.h

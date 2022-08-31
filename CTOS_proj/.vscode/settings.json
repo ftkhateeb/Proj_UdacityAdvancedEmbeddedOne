@@ -4,6 +4,11 @@
         "bit": "c",
         "cstddef": "c",
         "limits": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "port.h": "c",
+        "tm4c123gh6pm.h": "c",
+        "port_types.h": "c",
+        "dio.h": "c",
+        "port_cfg.h": "c"
     }
 }

@@ -59,7 +59,9 @@ typedef enum
     PORT_PORTF_PIN1,
     PORT_PORTF_PIN2,
     PORT_PORTF_PIN3,
-    PORT_PORTF_PIN4
+    PORT_PORTF_PIN4,
+
+    Port_Channel_MaxNum
 
 } PORT_PinType_e;
 
@@ -143,5 +145,7 @@ typedef struct
     PORT_PinOutputCurrentType_e CurrentDrive;
     PORT_PinLockType_e LockStatus;
 } PORT_ConfigType_S;
+
+
 
 #endif

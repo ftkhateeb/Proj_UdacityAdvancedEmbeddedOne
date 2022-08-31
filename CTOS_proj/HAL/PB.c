@@ -5,7 +5,6 @@
 void PB_Init(void)
 {
 	
-	GPIO_Init(PBConfig);
 	
 	
 }
