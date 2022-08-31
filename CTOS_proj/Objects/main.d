@@ -6,4 +6,7 @@
 .\objects\main.o: ..\CTOS_proj\types.h
 .\objects\main.o: .\MCAL\port_types.h
 .\objects\main.o: .\SERVICE\STD_types.h
+.\objects\main.o: .\SERVICE\RAL.h
+.\objects\main.o: .\Config\port_cfg.h
+.\objects\main.o: .\SERVICE\Bit_manipulation.h
 .\objects\main.o: .\HAL\PB.h

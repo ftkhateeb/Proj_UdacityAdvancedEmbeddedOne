@@ -6,3 +6,6 @@
 .\objects\pb.o: ..\CTOS_proj\tm4c123gh6pm.h
 .\objects\pb.o: .\MCAL\port_types.h
 .\objects\pb.o: .\SERVICE\STD_types.h
+.\objects\pb.o: .\SERVICE\RAL.h
+.\objects\pb.o: .\Config\port_cfg.h
+.\objects\pb.o: .\SERVICE\Bit_manipulation.h
