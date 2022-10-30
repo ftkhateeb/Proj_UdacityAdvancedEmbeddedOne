@@ -1,7 +1,6 @@
 #include "port.h"
 #include "Dio.h"
-
-extern PORT_ConfigType_S ConfigArray[];
+#include "port_lcfg.h"
 #if 0
 void PORT_clock_Init(void)
 {
@@ -96,6 +95,9 @@ void PORT_clock_Init(void)
 
 void PORT_init(void)
 { 
+
+    
+  PORT_clock_Init();
 
   uint8 i = 0;
   PORT_PinType_e Pin;

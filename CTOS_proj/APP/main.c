@@ -8,7 +8,7 @@
 #include "port.h"
 // 2. Declarations Section
 //   Global Variables
-unsigned long In;  // input from PF4
+PB_STATE In;  // input from PF4
 unsigned long Out; // outputs to PF3,PF2,PF1 (multicolor LED)
 
 //   Function Prototypes
@@ -20,21 +20,23 @@ void Delay(void);
 int main(void){
 
 
-  PORT_clock_Init();
   PORT_init();
+  LED_Init();
+  
   
   while(1){
-		In = GPIO_PORTF_DATA_R&0x10; // read PF4 into In
-    if(In == 0x00){              // zero means SW1 is pressed
-      GPIO_PORTF_DATA_R =0x02 ;  // LED is green
+
+		In = PB_GetButtonState(PB_ONE_ID); // read PF4 into In
+    if(In == BUTTON_PRESSED){              // zero means SW1 is pressed
+      LED_On(GREEN_LED_ID);     // LED is green
 		} else{                      // 0x10 means SW1 is not pressed
-      GPIO_PORTF_DATA_R =0x04;  // LED is red
+      LED_On(RED_LED_ID);  // LED is red
     }
 		
     Delay();                     // wait 0.1 sec
-    GPIO_PORTF_DATA_R =0x08;    // LED is blue
+    LED_On(BLUE_LED_ID);    // LED is blue
     Delay();                     // wait 0.1 sec
-		
+
   }
 }
 

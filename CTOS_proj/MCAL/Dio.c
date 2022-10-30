@@ -47,22 +47,64 @@ void DIO_WritePin(Dio_ChannelType_e PinId, Dio_LevelType_e level)
     switch (Port)
     {
     case DIO_PORTA:
-        SET_BIT(GPIO_PORTA_DATA_R,Pin);
+        if (level == Level_High)
+        {
+            SET_BIT(GPIO_PORTA_DATA_R,Pin);
+        }
+        else
+        {
+            CLR_BIT(GPIO_PORTA_DATA_R,Pin);
+        }
         break;
     case DIO_PORTB:
-        SET_BIT(GPIO_PORTB_DATA_R,Pin);
+        if (level == Level_High)
+        {
+            SET_BIT(GPIO_PORTB_DATA_R,Pin);
+        }
+        else
+        {
+            CLR_BIT(GPIO_PORTB_DATA_R,Pin);
+        }
         break;
     case DIO_PORTC:
-        SET_BIT(GPIO_PORTC_DATA_R,Pin);
+        if (level == Level_High)
+        {
+            SET_BIT(GPIO_PORTC_DATA_R,Pin);
+        }
+        else
+        {
+            CLR_BIT(GPIO_PORTC_DATA_R,Pin);
+        }
         break;
     case DIO_PORTD:
-        SET_BIT(GPIO_PORTD_DATA_R,Pin);
+        if (level == Level_High)
+        {
+            SET_BIT(GPIO_PORTD_DATA_R,Pin);
+        }
+        else
+        {
+            CLR_BIT(GPIO_PORTD_DATA_R,Pin);
+        }
         break;
     case DIO_PORTE:
-        SET_BIT(GPIO_PORTE_DATA_R,Pin);
+        if (level == Level_High)
+        {
+            SET_BIT(GPIO_PORTE_DATA_R,Pin);
+        }
+        else
+        {
+            CLR_BIT(GPIO_PORTE_DATA_R,Pin);
+        }
         break;
     case DIO_PORTF:
-        SET_BIT(GPIO_PORTF_DATA_R,Pin);
+        if (level == Level_High)
+        {
+            SET_BIT(GPIO_PORTF_DATA_R,Pin);
+        }
+        else
+        {
+            CLR_BIT(GPIO_PORTF_DATA_R,Pin);
+        }
         break;
     
     default:

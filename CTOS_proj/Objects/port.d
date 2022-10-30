@@ -1,12 +1,11 @@
 .\objects\port.o: MCAL\port.c
 .\objects\port.o: MCAL\port.h
-.\objects\port.o: ..\CTOS_proj\lcfg.h
-.\objects\port.o: ..\CTOS_proj\types.h
-.\objects\port.o: ..\CTOS_proj\tm4c123gh6pm.h
+.\objects\port.o: MCAL\tm4c123gh6pm.h
 .\objects\port.o: MCAL\port_types.h
-.\objects\port.o: .\SERVICE\STD_types.h
-.\objects\port.o: .\SERVICE\RAL.h
+.\objects\port.o: .\LIBRARIES\STD_types.h
+.\objects\port.o: MCAL\RAL.h
 .\objects\port.o: .\Config\port_cfg.h
-.\objects\port.o: .\SERVICE\Bit_manipulation.h
+.\objects\port.o: .\LIBRARIES\Bit_manipulation.h
 .\objects\port.o: MCAL\Dio.h
 .\objects\port.o: MCAL\Dio_types.h
+.\objects\port.o: .\Config\port_lcfg.h
