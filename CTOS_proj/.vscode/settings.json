@@ -9,6 +9,7 @@
         "tm4c123gh6pm.h": "c",
         "port_types.h": "c",
         "dio.h": "c",
-        "port_cfg.h": "c"
+        "port_cfg.h": "c",
+        "dio_types.h": "c"
     }
 }
