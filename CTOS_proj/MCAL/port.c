@@ -159,7 +159,8 @@ void PORT_init(void)
     }
     else
     {
-        SET_BIT(PORTA_REG.GPIOIM, Pin);
+        SET_BIT(PORT_Addr->GPIOIM, Pin);
+      
         if(ConfigArray[i].Interrupt == PORT_IntRisingEdge)
         {
             SET_BIT(PORT_Addr->GPIOIEV,Pin);

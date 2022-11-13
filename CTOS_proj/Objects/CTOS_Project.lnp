@@ -3,6 +3,7 @@
 ".\objects\port.o"
 ".\objects\dio.o"
 ".\objects\timer.o"
+".\objects\nvic.o"
 ".\objects\led.o"
 ".\objects\pb.o"
 ".\objects\port_lcfg.o"

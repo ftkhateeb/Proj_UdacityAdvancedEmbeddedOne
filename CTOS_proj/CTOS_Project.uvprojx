@@ -442,6 +442,16 @@
               <FileType>5</FileType>
               <FilePath>.\MCAL\RAL.h</FilePath>
             </File>
+            <File>
+              <FileName>NVIC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\NVIC.h</FilePath>
+            </File>
+            <File>
+              <FileName>NVIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\NVIC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

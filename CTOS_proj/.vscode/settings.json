@@ -10,6 +10,7 @@
         "port_types.h": "c",
         "dio.h": "c",
         "port_cfg.h": "c",
-        "dio_types.h": "c"
+        "dio_types.h": "c",
+        "ral.h": "c"
     }
 }

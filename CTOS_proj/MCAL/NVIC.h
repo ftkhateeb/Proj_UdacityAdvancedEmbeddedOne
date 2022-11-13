@@ -51,18 +51,15 @@ typedef struct
 /**********************************************************************************************************************
  *  GLOBAL DATA PROTOTYPES
  *********************************************************************************************************************/
-extern const NVIC_Cfg NVIC_PCfg[NVIC_NUM_OF_ENABLED_INTERRUPT];
 
-extern const uint8 NVIC_SUB_GP_Cfg;
  
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION PROTOTYPES
  *********************************************************************************************************************/
-void NVIC_Enable_interrupt(uint8 InterruptNum);
-void NVIC_Disable_interrupt(uint8 InterruptNum);
-void NVIC_CLR_PENDING_FLAG(uint8 InterruptNum);
-
-void NVIC_Set_int_priority(uint8 InterruptNum, uint8 Priority);
+void NVIC_EnableInterrupt(uint8 InterruptNum);
+void NVIC_DisableInterrupt(uint8 Interrupt_Num);
+void NVIC_ClrPendingFlag(uint8 InterruptNum);
+//void NVIC_Set_int_priority(uint8 InterruptNum, uint8 Priority);
  
 #endif  /* NVIC_H */
 
