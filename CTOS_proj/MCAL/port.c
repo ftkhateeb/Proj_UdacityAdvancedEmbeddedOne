@@ -1,46 +1,7 @@
 #include "port.h"
 #include "Dio.h"
 #include "port_lcfg.h"
-#if 0
-void PORT_clock_Init(void)
-{
-  //Enable clocks as per configurations
-  RCGCGPIO_REG.R0 = SYSCTR_RCC_GPIO_PORTA;
-  if(ENABLE == SYSCTR_RCC_GPIO_PORTA )
-  {
-    while((SYSCTL_PRGPIO_R & 0x00000001) == 0){};
-  }
-  RCGCGPIO_REG.R1 = SYSCTR_RCC_GPIO_PORTB;
-  if (ENABLE == SYSCTR_RCC_GPIO_PORTB)
-  {
-    while((SYSCTL_PRGPIO_R & 0x00000002) == 0){};
-  }
-  RCGCGPIO_REG.R2 = SYSCTR_RCC_GPIO_PORTC;
-  if (ENABLE == SYSCTR_RCC_GPIO_PORTC)
-  { 
-    while((SYSCTL_PRGPIO_R & 0x00000004) == 0){};
 
-  }
-  RCGCGPIO_REG.R3 = SYSCTR_RCC_GPIO_PORTD;
-  if (ENABLE == SYSCTR_RCC_GPIO_PORTD)
-  {
-    while((SYSCTL_PRGPIO_R & 0x00000008) == 0){};
-
-  }
-  RCGCGPIO_REG.R4 = SYSCTR_RCC_GPIO_PORTE;
-  if (ENABLE == SYSCTR_RCC_GPIO_PORTE)
-  {
-    while((SYSCTL_PRGPIO_R & 0x00000010) == 0){};
-
-  }
-  RCGCGPIO_REG.R5 = SYSCTR_RCC_GPIO_PORTF;
-  if (ENABLE == SYSCTR_RCC_GPIO_PORTF)
-  {
-    while((SYSCTL_PRGPIO_R & 0x00000020) == 0){};
-
-  }
-}
-#endif
 
 void PORT_clock_Init(void)
 { 
@@ -80,14 +41,6 @@ void PORT_clock_Init(void)
     GPIO_PORTF_LOCK_R = 0x4C4F434B;  
     GPIO_PORTF_CR_R = 0x1F;           // allow changes to PF4-0 
   }
-  //GPIO_PORTF_LOCK_R = 0x4C4F434B;   // 2) unlock PortF PF0  
-  //GPIO_PORTF_CR_R = 0x1F;           // allow changes to PF4-0       
-  //GPIO_PORTF_AMSEL_R = 0x00;        // 3) disable analog function
-  //GPIO_PORTF_PCTL_R = 0x00000000;   // 4) GPIO clear bit PCTL  
-  //GPIO_PORTF_DIR_R = 0x0E;          // 5) PF4,PF0 input, PF3,PF2,PF1 output   
-  //GPIO_PORTF_AFSEL_R = 0x00;        // 6) no alternate function
-  //GPIO_PORTF_PUR_R = 0x11;          // enable pullup resistors on PF4,PF0       
-  //GPIO_PORTF_DEN_R = 0x1F;          // 7) enable digital pins PF4-PF0 
 
 
 }
@@ -220,6 +173,9 @@ void PORT_init(void)
 
 void (*PortFCallbackPtr)(void);
 
+/* function used by the app layer
+* to assign the callback pointer to a function in app layer
+*/
 void PORT_PortFCallbackRegisteringFn ( void (*CallBackFn)(void) )
 {
     PortFCallbackPtr = CallBackFn;
@@ -227,16 +183,15 @@ void PORT_PortFCallbackRegisteringFn ( void (*CallBackFn)(void) )
 
 void GPIOF_Handler(void )
 {
+  /* wait for switch debouncing*/
   Delay(2);
+  /*invoke callback*/
   PortFCallbackPtr();
 
 }
 
 
-// Subroutine to wait 0.1 sec
-// Inputs: None
-// Outputs: None
-// Notes: ...
+/*Delay function used to overcome switch debouncing*/
 void Delay (unsigned long volatile time)
 {
   time = 727240*200/91*5;  // 0.1sec

@@ -4,3 +4,4 @@
 .\objects\systick.o: .\LIBRARIES\STD_types.h
 .\objects\systick.o: .\Config\Systick_cfg.h
 .\objects\systick.o: .\LIBRARIES\Bit_manipulation.h
+.\objects\systick.o: MCAL\RAL.h

@@ -45,33 +45,22 @@
  *  GLOBAL FUNCTIONS
  *********************************************************************************************************************/
 static void (*STICK_CallBack)(void);
-//the define call back  globel variable    (pointer to function)  
+/*Function used by the main to point the callback pointer
+*to a function in the app layer */
 void Systick_CallbackRegisteringFn (void (*callbackPtr)(void))
 {
     STICK_CallBack =  callbackPtr;
 }
 
-/*******************************************************************************************************************************
- *     the APIs supported by this driver  for  more information about the APIs check the function definitions
- */
 
-/******************************************************************************
-* \Syntax          : void MSTICK_voidInit(void )
-* \Description     : initialize  the clock of systick from choise the file configration 
-*                     Disable the sys tick system & Disable  interrupt the sys tick 
-*
-* \Sync\Async      : Synchronous
-* \Reentrancy      : non Reentrant
-* \Parameters (in) : NOna     
-* \Parameters (out): nona
-* \Return value:   : None
-*******************************************************************************/
-
+/*Init function*/
 void SYSTICK_voidInit(void )
 {
 	
 	#if CLOCK_SYS_TICK== STICK_AHB
+        /*NVIC_ST_CTRL_R = 4, enable system clock source to Systick*/
         SET_BIT(NVIC_ST_CTRL_R, 2);
+        /*current value register = 0, in case there were a garbage value*/
         NVIC_ST_CURRENT_R = 0;
 	#elif CLOCK_SYS_TICK == STICK_AHB_DIV_4
 
@@ -84,17 +73,7 @@ void SYSTICK_voidInit(void )
 	#endif 
 }                       
 
-
-/******************************************************************************
-* \Syntax          : void MSTICK_voidSetIntervalPeriodic(uint32 capy_u32Ticks, void (*capy_ptr)(void))
-* \Description     : the Asynchonious function counter timer  the value that as  delay by repated 
-*             
-* \Sync\Async      : ASynchronous
-* \Reentrancy      : non Reentrant
-* \Parameters (in) : capy_u32Ticks     
-* \Parameters (out): void (*capy_ptr)(void)
-* \Return value:   : None
-*******************************************************************************/
+/*function to start timer with a given number of ticks*/
 void SYSTICK_voidSetIntervalPeriodic(uint32 ticks)
 {
     SET_BIT(NVIC_ST_CTRL_R,0);
@@ -105,17 +84,7 @@ void SYSTICK_voidSetIntervalPeriodic(uint32 ticks)
 
 
 
-/******************************************************************************
-* \Syntax          : uint32  MSTICK_u32GetRemainingTime(void )
-* \Description     : the  function to handler ISR system timer sys_Tick
-*             
-*
-* \Sync\Async      : Synchronous
-* \Reentrancy      : non Reentrant
-* \Parameters (in) : none    
-* \Parameters (out): none
-* \Return value:   : none
-*******************************************************************************/
+/*IRQ Handler*/
 void SysTick_Handler(void)
 {
 

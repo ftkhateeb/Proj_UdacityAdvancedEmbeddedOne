@@ -30,7 +30,7 @@ int main(void)
   */
   PORT_PortFCallbackRegisteringFn(&PB_update);
   //Start Systick Timer with a period of half seconds
-  SYSTICK_voidSetIntervalPeriodic(SYSTICK_HALF_SEC);
+  SYSTICK_voidSetIntervalPeriodic(SYSTICK_THIRD_SEC);
 
 
   while(1)

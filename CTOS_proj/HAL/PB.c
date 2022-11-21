@@ -50,6 +50,11 @@ void PB_update (void)
         GPIO_PORTF_ICR_R |= 0x10;
         /*increase LED on time by 1 sec (3* thirds of sec)*/
         Led_on_time_ThirdSec += 3;
+        if (Led_on_time > 15)
+        {
+            Led_on_time = 0;
+            Led_on_time_ThirdSec = 0;
+        }
        
     }
 
@@ -59,6 +64,11 @@ void PB_update (void)
         Led_off_time ++;
         GPIO_PORTF_ICR_R |= 0x01;
         Led_off_time_ThirdSec += 3;
+        if (Led_off_time > 15)
+        {
+            Led_off_time = 0;
+            Led_off_time_ThirdSec = 0;
+        }
              
     }
     else

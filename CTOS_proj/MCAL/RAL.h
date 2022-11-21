@@ -2,6 +2,16 @@
 #define LEDPROJ_SERVICE_RAL_H
 #include "STD_types.h"
 
+
+typedef struct 
+    {    
+	volatile  uint32  STK_CTRL  ;
+	volatile  uint32  STK_LOAD  ;
+	volatile  uint32  STK_CURRENT   ;
+}STICK_I ;
+//pointer to sturct STICK_I
+#define     STICK    ((STICK_I *)0xE000E010)
+
 typedef struct
 {
     uint32 R0:1;

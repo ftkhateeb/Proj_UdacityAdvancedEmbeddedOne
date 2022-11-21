@@ -36,14 +36,14 @@ compiling main.c...
    *********************************************************************************************************************/
 .\MCAL\port_types.h(151): warning:  #1-D: last line of file ends without a newline
   #endif
-.\MCAL\RAL.h(134): warning:  #1-D: last line of file ends without a newline
+.\MCAL\RAL.h(144): warning:  #1-D: last line of file ends without a newline
   #endif
 .\MCAL\NVIC.h(68): warning:  #1-D: last line of file ends without a newline
    *********************************************************************************************************************/
-.\Config\Systick_cfg.h(13): warning:  #1-D: last line of file ends without a newline
+.\Config\Systick_cfg.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
 APP\main.c(33): warning:  #223-D: function "SYSTICK_voidSetIntervalPeriodic" declared implicitly
-    SYSTICK_voidSetIntervalPeriodic(SYSTICK_HALF_SEC);
+    SYSTICK_voidSetIntervalPeriodic(SYSTICK_THIRD_SEC);
 APP\main.c: 8 warnings, 0 errors
 compiling Dio.c...
 .\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
@@ -73,38 +73,36 @@ MCAL\Dio.c(118): warning:  #188-D: enumerated type mixed with another type
 MCAL\Dio.c(119): warning:  #188-D: enumerated type mixed with another type
       Dio_PinPositionType_e Pin = PinId % 8 ;
 MCAL\Dio.c: 13 warnings, 0 errors
-compiling port.c...
-MCAL\port_types.h(151): warning:  #1-D: last line of file ends without a newline
-  #endif
-MCAL\RAL.h(134): warning:  #1-D: last line of file ends without a newline
-  #endif
-.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
-  #endif
-.\Config\port_lcfg.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif LEDPORJ_CONFIG_PORT_LCFG_H
-.\Config\port_lcfg.h(6): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif LEDPORJ_CONFIG_PORT_LCFG_H
-MCAL\port.c(109): warning:  #188-D: enumerated type mixed with another type
-      Pin  = ConfigArray[i].PinId % 8 ;
-MCAL\port.c(110): warning:  #188-D: enumerated type mixed with another type
-      Port = ConfigArray[i].PinId / 8 ;
-MCAL\port.c(230): warning:  #223-D: function "Delay" declared implicitly
-    Delay(2);
-MCAL\port.c(240): warning:  #159-D: declaration is incompatible with previous "Delay"  (declared at line 230)
-  void Delay (unsigned long volatile time)
-MCAL\port.c: 9 warnings, 0 errors
 compiling Systick.c...
-.\Config\Systick_cfg.h(13): warning:  #1-D: last line of file ends without a newline
+.\Config\Systick_cfg.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
 .\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
-MCAL\Systick.c: 2 warnings, 0 errors
+MCAL\RAL.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+MCAL\Systick.c: 3 warnings, 0 errors
 compiling NVIC.c...
 .\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
 MCAL\NVIC.h(68): warning:  #1-D: last line of file ends without a newline
    *********************************************************************************************************************/
 MCAL\NVIC.c: 2 warnings, 0 errors
+compiling PB.c...
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+HAL\PB.h(60): warning:  #1-D: last line of file ends without a newline
+   *********************************************************************************************************************/
+HAL\led.h(65): warning:  #1-D: last line of file ends without a newline
+   *********************************************************************************************************************/
+HAL\PB.c(22): warning:  #111-D: statement is unreachable
+          break;
+HAL\PB.c(35): warning:  #111-D: statement is unreachable
+          break;
+HAL\PB.c(38): warning:  #127-D: expected a statement
+      }
+HAL\PB.c(39): warning:  #940-D: missing return statement at end of non-void function "PB_GetButtonState" 
+  }
+HAL\PB.c: 7 warnings, 0 errors
 compiling led.c...
 .\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -124,26 +122,30 @@ Config\port_lcfg.c(17): warning:  #1-D: last line of file ends without a newline
   };
 Config\port_lcfg.c: 2 warnings, 0 errors
 assembling startup_TM4C123.s...
-compiling PB.c...
+compiling port.c...
+MCAL\port_types.h(151): warning:  #1-D: last line of file ends without a newline
+  #endif
+MCAL\RAL.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
 .\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
-HAL\PB.h(60): warning:  #1-D: last line of file ends without a newline
-   *********************************************************************************************************************/
-HAL\led.h(65): warning:  #1-D: last line of file ends without a newline
-   *********************************************************************************************************************/
-HAL\PB.c(22): warning:  #111-D: statement is unreachable
-          break;
-HAL\PB.c(35): warning:  #111-D: statement is unreachable
-          break;
-HAL\PB.c(38): warning:  #127-D: expected a statement
-      }
-HAL\PB.c(39): warning:  #940-D: missing return statement at end of non-void function "PB_GetButtonState" 
-  }
-HAL\PB.c: 7 warnings, 0 errors
+.\Config\port_lcfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif LEDPORJ_CONFIG_PORT_LCFG_H
+.\Config\port_lcfg.h(6): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif LEDPORJ_CONFIG_PORT_LCFG_H
+MCAL\port.c(62): warning:  #188-D: enumerated type mixed with another type
+      Pin  = ConfigArray[i].PinId % 8 ;
+MCAL\port.c(63): warning:  #188-D: enumerated type mixed with another type
+      Port = ConfigArray[i].PinId / 8 ;
+MCAL\port.c(187): warning:  #223-D: function "Delay" declared implicitly
+    Delay(2);
+MCAL\port.c(195): warning:  #159-D: declaration is incompatible with previous "Delay"  (declared at line 187)
+  void Delay (unsigned long volatile time)
+MCAL\port.c: 9 warnings, 0 errors
 compiling system_TM4C123.c...
 linking...
-Program Size: Code=2620 RO-data=652 RW-data=64 ZI-data=608  
-".\Objects\CTOS_Project.axf" - 0 Error(s), 48 Warning(s).
+Program Size: Code=2656 RO-data=652 RW-data=64 ZI-data=608  
+".\Objects\CTOS_Project.axf" - 0 Error(s), 49 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -172,7 +174,7 @@ Package Vendor: Keil
       Source file:   Device\Source\ARM\startup_TM4C123.s
       Include file:  Device\Include\TM4C123\TM4C123.h
       Source file:   Device\Source\system_TM4C123.c
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:11
 </pre>
 </body>
 </html>
