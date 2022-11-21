@@ -1,0 +1,9 @@
+#ifndef   STICK_CONFIG_H
+#define   STICK_CONFIG_H
+
+ 
+
+#define    CLOCK_SYS_TICK   STICK_AHB
+#define    SYSTICK_THIRD_SEC 15999999
+#define    SYSTICK_TIME SYSTICK_THIRD_SEC
+#endif

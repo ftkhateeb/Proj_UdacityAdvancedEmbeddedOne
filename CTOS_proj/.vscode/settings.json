@@ -9,6 +9,13 @@
         "tm4c123gh6pm.h": "c",
         "port_types.h": "c",
         "dio.h": "c",
-        "port_cfg.h": "c"
+        "port_cfg.h": "c",
+        "dio_types.h": "c",
+        "ral.h": "c",
+        "systick.h": "c",
+        "std_types.h": "c",
+        "nvic.h": "c",
+        "led.h": "c",
+        "pb.h": "c"
     }
 }
