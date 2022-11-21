@@ -12,6 +12,7 @@
 
 //Local functions 
 static void PORT_clock_Init(void);
+void PORT_PortFCallbackRegisteringFn ( void (*CallBackFn)(void) );
 
 //Exported Functions
 void PORT_init(void);

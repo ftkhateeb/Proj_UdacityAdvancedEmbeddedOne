@@ -22,17 +22,17 @@ Dialog DLL:      TCM.DLL V1.36.5.0
  
 <h2>Project:</h2>
 D:\UdacityAdvancedEmbedded\Arm\Proj_Arm_1\Proj_UdacityAdvancedEmbeddedOne\CTOS_proj\CTOS_Project.uvprojx
-Project File Date:  11/09/2022
+Project File Date:  11/19/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'TivaC'
+Rebuild target 'TivaC'
 compiling main.c...
 .\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
-.\HAL\led.h(53): warning:  #1-D: last line of file ends without a newline
+.\HAL\led.h(65): warning:  #1-D: last line of file ends without a newline
    *********************************************************************************************************************/
-.\HAL\PB.h(56): warning:  #1-D: last line of file ends without a newline
+.\HAL\PB.h(60): warning:  #1-D: last line of file ends without a newline
    *********************************************************************************************************************/
 .\MCAL\port_types.h(151): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -40,18 +40,110 @@ compiling main.c...
   #endif
 .\MCAL\NVIC.h(68): warning:  #1-D: last line of file ends without a newline
    *********************************************************************************************************************/
-APP\main.c(24): warning:  #177-D: variable "ButtonOne_state"  was declared but never referenced
-    PB_STATE ButtonOne_state;
-APP\main.c(25): warning:  #177-D: variable "ButtonTwo_state"  was declared but never referenced
-    PB_STATE ButtonTwo_state;  
-APP\main.c(26): warning:  #177-D: variable "ON_time_sec"  was declared but never referenced
-    uint8 ON_time_sec = 5;
-APP\main.c(27): warning:  #177-D: variable "OFF_time_sec"  was declared but never referenced
-    uint8 OFF_time_sec = 5;
-APP\main.c: 10 warnings, 0 errors
+.\Config\Systick_cfg.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+APP\main.c(33): warning:  #223-D: function "SYSTICK_voidSetIntervalPeriodic" declared implicitly
+    SYSTICK_voidSetIntervalPeriodic(SYSTICK_HALF_SEC);
+APP\main.c: 8 warnings, 0 errors
+compiling Dio.c...
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+MCAL\Dio.c(7): warning:  #188-D: enumerated type mixed with another type
+      Dio_PortType_e Port = PinId / 8 ;
+MCAL\Dio.c(8): warning:  #188-D: enumerated type mixed with another type
+      Dio_PinPositionType_e Pin = PinId % 8 ;
+MCAL\Dio.c(13): warning:  #188-D: enumerated type mixed with another type
+          result  = GET_BIT(GPIO_PORTA_DATA_R, Pin);
+MCAL\Dio.c(16): warning:  #188-D: enumerated type mixed with another type
+          result  = GET_BIT(GPIO_PORTB_DATA_R, Pin);
+MCAL\Dio.c(19): warning:  #188-D: enumerated type mixed with another type
+          result  = GET_BIT(GPIO_PORTC_DATA_R, Pin);
+MCAL\Dio.c(23): warning:  #188-D: enumerated type mixed with another type
+          result  = GET_BIT(GPIO_PORTD_DATA_R, Pin);
+MCAL\Dio.c(27): warning:  #188-D: enumerated type mixed with another type
+          result  = GET_BIT(GPIO_PORTE_DATA_R, Pin);
+MCAL\Dio.c(31): warning:  #188-D: enumerated type mixed with another type
+          result  = GET_BIT(GPIO_PORTF_DATA_R, Pin);
+MCAL\Dio.c(44): warning:  #188-D: enumerated type mixed with another type
+      Dio_PinPositionType_e Pin = PinId % 8 ;
+MCAL\Dio.c(45): warning:  #188-D: enumerated type mixed with another type
+      Dio_PortType_e Port = PinId / 8 ;
+MCAL\Dio.c(118): warning:  #188-D: enumerated type mixed with another type
+      Dio_PortType_e Port =  PinId / 8 ;
+MCAL\Dio.c(119): warning:  #188-D: enumerated type mixed with another type
+      Dio_PinPositionType_e Pin = PinId % 8 ;
+MCAL\Dio.c: 13 warnings, 0 errors
+compiling port.c...
+MCAL\port_types.h(151): warning:  #1-D: last line of file ends without a newline
+  #endif
+MCAL\RAL.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\Config\port_lcfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif LEDPORJ_CONFIG_PORT_LCFG_H
+.\Config\port_lcfg.h(6): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif LEDPORJ_CONFIG_PORT_LCFG_H
+MCAL\port.c(109): warning:  #188-D: enumerated type mixed with another type
+      Pin  = ConfigArray[i].PinId % 8 ;
+MCAL\port.c(110): warning:  #188-D: enumerated type mixed with another type
+      Port = ConfigArray[i].PinId / 8 ;
+MCAL\port.c(230): warning:  #223-D: function "Delay" declared implicitly
+    Delay(2);
+MCAL\port.c(240): warning:  #159-D: declaration is incompatible with previous "Delay"  (declared at line 230)
+  void Delay (unsigned long volatile time)
+MCAL\port.c: 9 warnings, 0 errors
+compiling Systick.c...
+.\Config\Systick_cfg.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+MCAL\Systick.c: 2 warnings, 0 errors
+compiling NVIC.c...
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+MCAL\NVIC.h(68): warning:  #1-D: last line of file ends without a newline
+   *********************************************************************************************************************/
+MCAL\NVIC.c: 2 warnings, 0 errors
+compiling led.c...
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+HAL\led.h(65): warning:  #1-D: last line of file ends without a newline
+   *********************************************************************************************************************/
+HAL\led.c(40): warning:  #127-D: expected a statement
+  	}
+HAL\led.c(61): warning:  #127-D: expected a statement
+  	}
+HAL\led.c(107): warning:  #1-D: last line of file ends without a newline
+  }
+HAL\led.c: 5 warnings, 0 errors
+compiling port_lcfg.c...
+.\MCAL\port_types.h(151): warning:  #1-D: last line of file ends without a newline
+  #endif
+Config\port_lcfg.c(17): warning:  #1-D: last line of file ends without a newline
+  };
+Config\port_lcfg.c: 2 warnings, 0 errors
+assembling startup_TM4C123.s...
+compiling PB.c...
+.\LIBRARIES\Bit_manipulation.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+HAL\PB.h(60): warning:  #1-D: last line of file ends without a newline
+   *********************************************************************************************************************/
+HAL\led.h(65): warning:  #1-D: last line of file ends without a newline
+   *********************************************************************************************************************/
+HAL\PB.c(22): warning:  #111-D: statement is unreachable
+          break;
+HAL\PB.c(35): warning:  #111-D: statement is unreachable
+          break;
+HAL\PB.c(38): warning:  #127-D: expected a statement
+      }
+HAL\PB.c(39): warning:  #940-D: missing return statement at end of non-void function "PB_GetButtonState" 
+  }
+HAL\PB.c: 7 warnings, 0 errors
+compiling system_TM4C123.c...
 linking...
-Program Size: Code=2212 RO-data=652 RW-data=36 ZI-data=612  
-".\Objects\CTOS_Project.axf" - 0 Error(s), 10 Warning(s).
+Program Size: Code=2620 RO-data=652 RW-data=64 ZI-data=608  
+".\Objects\CTOS_Project.axf" - 0 Error(s), 48 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -77,10 +169,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.3.0
 
    * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device\Source\ARM\startup_TM4C123.s
       Include file:  Device\Include\TM4C123\TM4C123.h
       Source file:   Device\Source\system_TM4C123.c
-      Source file:   Device\Source\ARM\startup_TM4C123.s
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

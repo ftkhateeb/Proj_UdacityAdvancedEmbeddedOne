@@ -1,20 +1,22 @@
 Dependencies for Project 'CTOS_Project', Target 'TivaC': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
-F (.\APP\main.c)(0x636B4365)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\APP\main.c)(0x6379411B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\MCAL\tm4c123gh6pm.h)(0x63056FF0)
-I (.\HAL\led.h)(0x635E5364)
+I (.\HAL\led.h)(0x63794B84)
 I (.\MCAL\Dio.h)(0x630B5831)
 I (.\MCAL\Dio_types.h)(0x630AEA4B)
 I (.\LIBRARIES\STD_types.h)(0x630A834E)
 I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
-I (.\HAL\PB.h)(0x635E6B04)
-I (.\MCAL\port.h)(0x635E437F)
+I (.\HAL\PB.h)(0x63794A7F)
+I (.\MCAL\port.h)(0x63793FC7)
 I (.\MCAL\port_types.h)(0x635A7B76)
 I (.\MCAL\RAL.h)(0x6363BA53)
 I (.\Config\port_cfg.h)(0x630EAC71)
 I (.\MCAL\NVIC.h)(0x636B3102)
-F (.\MCAL\port.c)(0x636B430E)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
-I (MCAL\port.h)(0x635E437F)
+I (.\MCAL\Systick.h)(0x637916C6)
+I (.\Config\Systick_cfg.h)(0x63792F8F)
+F (.\MCAL\port.c)(0x637942CF)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
+I (MCAL\port.h)(0x63793FC7)
 I (MCAL\tm4c123gh6pm.h)(0x63056FF0)
 I (MCAL\port_types.h)(0x635A7B76)
 I (.\LIBRARIES\STD_types.h)(0x630A834E)
@@ -24,18 +26,16 @@ I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
 I (MCAL\Dio.h)(0x630B5831)
 I (MCAL\Dio_types.h)(0x630AEA4B)
 I (.\Config\port_lcfg.h)(0x635E4672)
-F (.\MCAL\port.h)(0x635E437F)()
+F (.\MCAL\port.h)(0x63793FC7)()
 F (.\MCAL\Dio.h)(0x630B5831)()
-F (.\MCAL\Dio.c)(0x635E5656)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\dio.o --omf_browse .\objects\dio.crf --depend .\objects\dio.d)
+F (.\MCAL\Dio.c)(0x6379404F)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\dio.o --omf_browse .\objects\dio.crf --depend .\objects\dio.d)
 I (MCAL\Dio.h)(0x630B5831)
 I (MCAL\Dio_types.h)(0x630AEA4B)
 I (.\LIBRARIES\STD_types.h)(0x630A834E)
 I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
 I (MCAL\tm4c123gh6pm.h)(0x63056FF0)
 F (.\MCAL\Dio_types.h)(0x630AEA4B)()
-F (.\MCAL\timer.c)(0x6305B085)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
 F (.\MCAL\port_types.h)(0x635A7B76)()
-F (.\MCAL\timer.h)(0x6305B295)()
 F (.\MCAL\tm4c123gh6pm.h)(0x63056FF0)()
 F (.\MCAL\RAL.h)(0x6363BA53)()
 F (.\MCAL\NVIC.h)(0x636B3102)()
@@ -44,22 +44,30 @@ I (MCAL\NVIC.h)(0x636B3102)
 I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
 I (.\LIBRARIES\STD_types.h)(0x630A834E)
 I (MCAL\tm4c123gh6pm.h)(0x63056FF0)
-F (.\HAL\led.c)(0x635E582B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
-I (HAL\led.h)(0x635E5364)
+F (.\MCAL\Systick.c)(0x63793AC0)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
+I (MCAL\tm4c123gh6pm.h)(0x63056FF0)
+I (MCAL\Systick.h)(0x637916C6)
+I (.\LIBRARIES\STD_types.h)(0x630A834E)
+I (.\Config\Systick_cfg.h)(0x63792F8F)
+I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
+F (.\MCAL\Systick.h)(0x637916C6)()
+F (.\HAL\led.c)(0x63794CBD)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (HAL\led.h)(0x63794B84)
 I (.\MCAL\Dio.h)(0x630B5831)
 I (.\MCAL\Dio_types.h)(0x630AEA4B)
 I (.\LIBRARIES\STD_types.h)(0x630A834E)
 I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
 I (.\MCAL\tm4c123gh6pm.h)(0x63056FF0)
-F (.\HAL\led.h)(0x635E5364)()
-F (.\HAL\PB.c)(0x635E6B8A)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\pb.o --omf_browse .\objects\pb.crf --depend .\objects\pb.d)
-I (HAL\PB.h)(0x635E6B04)
+F (.\HAL\led.h)(0x63794B84)()
+F (.\HAL\PB.c)(0x63794CF3)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\pb.o --omf_browse .\objects\pb.crf --depend .\objects\pb.d)
+I (HAL\PB.h)(0x63794A7F)
 I (.\MCAL\Dio.h)(0x630B5831)
 I (.\MCAL\Dio_types.h)(0x630AEA4B)
 I (.\LIBRARIES\STD_types.h)(0x630A834E)
 I (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)
 I (.\MCAL\tm4c123gh6pm.h)(0x63056FF0)
-F (.\HAL\PB.h)(0x635E6B04)()
+I (HAL\led.h)(0x63794B84)
+F (.\HAL\PB.h)(0x63794A7F)()
 F (.\LIBRARIES\Bit_manipulation.h)(0x630B58EC)()
 F (.\LIBRARIES\STD_types.h)(0x630A834E)()
 F (.\Config\port_lcfg.c)(0x635A7B71)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\port_lcfg.o --omf_browse .\objects\port_lcfg.crf --depend .\objects\port_lcfg.d)
@@ -68,6 +76,7 @@ I (.\LIBRARIES\STD_types.h)(0x630A834E)
 I (Config\port_cfg.h)(0x630EAC71)
 F (.\Config\port_cfg.h)(0x630EAC71)()
 F (.\Config\port_lcfg.h)(0x635E4672)()
+F (.\Config\Systick_cfg.h)(0x63792F8F)()
 F (RTE\Device\TM4C123GH6PM\startup_TM4C123.s)(0x51B6E406)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"--list .\listings\startup_tm4c123.lst --xref -o .\objects\startup_tm4c123.o --depend .\objects\startup_tm4c123.d)
 F (RTE\Device\TM4C123GH6PM\system_TM4C123.c)(0x550A65DA)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\HAL -I .\MCAL -I .\SERVICE -I .\LIBRARIES -I .\APP -I ..\CTOS_proj -I .\Config-I.\RTE\_TivaC-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="529" -D_RTE_ -DTM4C123GH6PM-o .\objects\system_tm4c123.o --omf_browse .\objects\system_tm4c123.crf --depend .\objects\system_tm4c123.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B2678)

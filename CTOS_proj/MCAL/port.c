@@ -218,6 +218,33 @@ void PORT_init(void)
   
 }
 
+void (*PortFCallbackPtr)(void);
+
+void PORT_PortFCallbackRegisteringFn ( void (*CallBackFn)(void) )
+{
+    PortFCallbackPtr = CallBackFn;
+}
+
+void GPIOF_Handler(void )
+{
+  Delay(2);
+  PortFCallbackPtr();
+
+}
+
+
+// Subroutine to wait 0.1 sec
+// Inputs: None
+// Outputs: None
+// Notes: ...
+void Delay (unsigned long volatile time)
+{
+  time = 727240*200/91*5;  // 0.1sec
+  while(time)
+  {
+		time--;
+  }
+}
 #if 0
 
 void PORT1_init(void)

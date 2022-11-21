@@ -11,3 +11,5 @@
 .\objects\main.o: .\MCAL\RAL.h
 .\objects\main.o: .\Config\port_cfg.h
 .\objects\main.o: .\MCAL\NVIC.h
+.\objects\main.o: .\MCAL\Systick.h
+.\objects\main.o: .\Config\Systick_cfg.h

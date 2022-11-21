@@ -5,3 +5,4 @@
 .\objects\pb.o: .\LIBRARIES\STD_types.h
 .\objects\pb.o: .\LIBRARIES\Bit_manipulation.h
 .\objects\pb.o: .\MCAL\tm4c123gh6pm.h
+.\objects\pb.o: HAL\led.h

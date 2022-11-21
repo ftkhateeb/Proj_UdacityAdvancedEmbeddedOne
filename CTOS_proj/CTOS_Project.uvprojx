@@ -418,19 +418,9 @@
               <FilePath>.\MCAL\Dio_types.h</FilePath>
             </File>
             <File>
-              <FileName>timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\timer.c</FilePath>
-            </File>
-            <File>
               <FileName>port_types.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\MCAL\port_types.h</FilePath>
-            </File>
-            <File>
-              <FileName>timer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\MCAL\timer.h</FilePath>
             </File>
             <File>
               <FileName>tm4c123gh6pm.h</FileName>
@@ -451,6 +441,16 @@
               <FileName>NVIC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\MCAL\NVIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>Systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\Systick.c</FilePath>
+            </File>
+            <File>
+              <FileName>Systick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\Systick.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -511,6 +511,11 @@
               <FileName>port_lcfg.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config\port_lcfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>Systick_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Config\Systick_cfg.h</FilePath>
             </File>
           </Files>
         </Group>

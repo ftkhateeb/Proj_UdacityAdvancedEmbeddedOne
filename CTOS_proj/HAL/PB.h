@@ -47,8 +47,12 @@ typedef enum
  *  GLOBAL FUNCTION PROTOTYPES
  *********************************************************************************************************************/
 
+/* Function to return the Pushbutton state based on the PB ID*/
 PB_STATE PB_GetButtonState(PB_ID ID);
- 
+
+/*CallBack function that will be triggered by PORTF_handler*/
+void PB_update (void);
+
 #endif  /* LEDPROJ_HAL_LED_H */
 
 /**********************************************************************************************************************

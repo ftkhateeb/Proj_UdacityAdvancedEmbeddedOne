@@ -1,13 +1,5 @@
 #include "PB.h"
-
- //extern Port_configType PBConfig;
-
-void PB_Init(void)
-{
-	
-	
-	
-}
+#include "led.h"
 
 PB_STATE PB_GetButtonState(PB_ID ID)
 {
@@ -43,6 +35,35 @@ PB_STATE PB_GetButtonState(PB_ID ID)
         break;
     default:
         
+    }
+}
+
+
+
+void PB_update (void)
+{
+    /*If Interrupt is caused by the first Switch*/
+    if ( GPIO_PORTF_MIS_R & 0x10)
+    {
+        Led_on_time ++;
+        /*clear Interrupt flag*/
+        GPIO_PORTF_ICR_R |= 0x10;
+        /*increase LED on time by 1 sec (3* thirds of sec)*/
+        Led_on_time_ThirdSec += 3;
+       
+    }
+
+    /*Same logic but for the other switch*/
+    else if ( GPIO_PORTF_MIS_R & 0x01)
+    {
+        Led_off_time ++;
+        GPIO_PORTF_ICR_R |= 0x01;
+        Led_off_time_ThirdSec += 3;
+             
+    }
+    else
+    {
+
     }
 }
 
